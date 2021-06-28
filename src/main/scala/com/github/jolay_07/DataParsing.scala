@@ -105,43 +105,43 @@ object DataParsing extends App{
    // station_latitude_dms, station_longitude_dms, station_altitude, type_of_station, station_type_of_area, station_characteristic_of_zone,
    // station_subcategory_rural_background, monitoring_obj, meteorological_parameter)
 
-  type MetaDataFile = (String, String, String, String, String, String, Int, Int, Int, Long, Long, String, String, Int, String,
-    String, Double, Double, String, String, Int, String, String, String, String, String, String)
+  //type MetaDataFile = (String, String, String, String, String, String, Int, Int, Int, Long, Long, String, String, Int, String,
+  //  String, Double, Double, String, String, Int, String, String, String, String, String, String)
 
-  def convertToMetaData(tokens: Seq[String]):metaDataFile = {
-    metaDataFile(
-      tokens(0),
-      tokens(1),
-      tokens(2),
-      tokens(3),
-      tokens(4),
-      tokens(5),
-      tokens(6).toInt,
-      tokens(7).toInt,
-      tokens(8).toInt,
-      tokens(9).toLong,
-      tokens(10).toLong,
-      tokens(11),
-      tokens(12),
-      tokens(13).toInt,
-      tokens(14),
-      tokens(15),
-      tokens(16).toDouble,
-      tokens(17).toDouble,
-      tokens(18),
-      tokens(19),
-      tokens(20).toInt,
-      tokens(21),
-      tokens(22),
-      tokens(23),
-      tokens(24),
-      tokens(25),
-      tokens(26)
-    )
+//  def convertToMetaData(tokens: Seq[String]):metaDataFile = {
+//    metaDataFile(
+//      tokens(0),
+//      tokens(1),
+//      tokens(2),
+//      tokens(3),
+//      tokens(4),
+//      tokens(5),
+//      tokens(6).toInt,
+//      tokens(7).toInt,
+//      tokens(8).toInt,
+//      tokens(9).toLong,
+//      tokens(10).toLong,
+//      tokens(11),
+//      tokens(12),
+//      tokens(13).toInt,
+//      tokens(14),
+//      tokens(15),
+//      tokens(16).toDouble,
+//      tokens(17).toDouble,
+//      tokens(18),
+//      tokens(19),
+//      tokens(20).toInt,
+//      tokens(21),
+//      tokens(22),
+//      tokens(23),
+//      tokens(24),
+//      tokens(25),
+//      tokens(26)
+//    )
+//
+//  }
 
-  }
+ // val Data = fileSeq.tail.map(convertToMetaData(_))
 
-  val Data = fileSeq.tail.map(convertToMetaData(_))
-
-  Data.slice(0,5).foreach(println)
+ // Data.slice(0,5).foreach(println)
 }
